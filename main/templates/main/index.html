@@ -1,0 +1,11 @@
+{% extends 'main/glav.html' %}
+
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block content %}
+<h1>Главная страница</h1>
+<p>Начните расставлять ударение прямо сейчас</p>
+<a href="{% url 'words' %}" class="btn btn-warning">Начать</a>
+{% endblock %}

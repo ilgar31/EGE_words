@@ -1,0 +1,64 @@
+{% extends 'main/glav.html' %}
+
+{% block title %}
+Проверка знаний
+{% endblock %}
+
+{% block content %}
+<div class="choose_words">
+    <h1>Расставляйте ударение в словах</h1>
+    <p>Проверьте свои знания прямо сейчас!</p><br>
+    <h3>Выберите режим</h3><br>
+    <div class="grid_box">
+
+        <div class="style_words">
+            <br>
+            <h5>ВСЕ СЛОВА</h5>
+            <p>Количество слов: {{ all }}</p>
+            <a href="{% url 'all_words' %}" class="btn btn-warning">Начать</a>
+        </div>
+
+        <div class="style_words">
+            <br>
+            <h5>ИМЕНА СУЩЕСТВИТЕЛЬНЫЕ</h5>
+            <p>Количество слов: {{ noun }} </p>
+            <a href="{% url 'noun_words' %}" class="btn btn-warning">Начать</a>
+        </div>
+
+        <div class="style_words">
+            <br>
+            <h5>ИМЕНА ПРИЛАГАТЕЛЬНЫЕ</h5>
+            <p>Количество слов: {{ adjective }} </p>
+            <a href="{% url 'adjective_words' %}" class="btn btn-warning">Начать</a>
+        </div>
+
+        <div class="style_words">
+            <br>
+            <h5>ГЛАГОЛЫ</h5>
+            <p>Количество слов: {{ verbs }} </p>
+            <a href="{% url 'verbs_words' %}" class="btn btn-warning">Начать</a>
+        </div>
+
+        <div class="style_words">
+            <br>
+            <h5>ПРИЧАСТИЯ И ОТГЛАГОЛ. ПРИЛ.</h5>
+            <p>Количество слов: {{ communion }} </p>
+            <a href="{% url 'communion_words' %}" class="btn btn-warning">Начать</a>
+        </div>
+
+        <div class="style_words">
+            <br>
+            <h5>НАРЕЧИЯ</h5>
+            <p>Количество слов: {{ adverbs }} </p>
+            <a href="{% url 'adverbs_words' %}" class="btn btn-warning">Начать</a>
+        </div>
+
+        <div class="style_words">
+            <br>
+            <h5>ДЕЕПРИЧАСТИЯ</h5>
+            <p>Количество слов: {{ gerunds }} </p>
+            <a href="{% url 'gerunds_words' %}" class="btn btn-warning">Начать</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

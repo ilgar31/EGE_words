@@ -1,0 +1,114 @@
+body {
+    background: #2c2c2c;
+}
+
+main  {
+    float: left;
+    color: #fff;
+    position: absolute;
+    top: 35%;
+    left: 11%;
+    text-align: center;
+    width: 75%;
+}
+
+main  h1 {font-size: 50px;}
+main  p {max-width: 400px; margin: 20px auto;}
+main button {font-size: 70px; max-width: 70px; margin: 20px auto;}
+main button:focus {font-size: 70px; max-width: 70px; margin: 20px auto;}
+
+.butt {
+  background-color: #2c2c2c;
+  color: white;
+  border: none;
+  margin-left: -5px;
+  text-decoration: none;
+}
+
+
+.butt:hover {
+  border: none;
+  text-decoration: none;
+  color: yellow;
+  text-shadow: 1.5px 0 1.5px #e5f53d,
+0 1.5px 1.5px #e5f53d,
+-1.5px 0 1.5px #e5f53d,
+0 -1.5px 1.5px #e5f53d;
+}
+
+.butt:focus {
+  border: none;
+  text-decoration: none;
+  color: orange;
+  text-shadow: 1.5px 0 1.5px #c98544,
+0 1.5px 1.5px #c98544,
+-1.5px 0 1.5px #c98544,
+0 -1.5px 1.5px #c98544;
+}
+
+.warning_message {
+    background: red; /* Цвет фона */
+    color: white; /* Цвет текста */
+    padding: 8px; /* Поля вокруг текста */
+    border-radius: 15px; /* Уголки */
+    margin-left: auto;
+    margin-right: auto;
+    width: 175px;
+    opacity: 1;
+
+    animation: fadeIn 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+.nice_message {
+    background: green; /* Цвет фона */
+    color: white; /* Цвет текста */
+    padding: 8px; /* Поля вокруг текста */
+    border-radius: 15px; /* Уголки */
+    margin-left: auto;
+    margin-right: auto;
+    width: 175px;
+    opacity: 1;
+
+    animation: fadeIn 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.choose_words {
+    margin-top: -12%;
+}
+
+.style_words {
+    height: 170px;
+    width: 230px;
+    border-radius: 10px;
+    border-color: white;
+    border: 2px solid;
+    position: relative;
+}
+
+.style_words p {
+    margin-top: 5px;
+}
+
+.style_words a {
+    margin: auto;
+    text-align: center;
+    margin-left: -16%;
+    bottom: 10px;
+    position: absolute;
+}
+
+.grid_box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+}

@@ -1,0 +1,29 @@
+{% extends 'main/glav.html' %}
+
+{% block title %}
+Все слова
+{% endblock %}
+
+{% block content %}
+<h1>Расставляйте ударение в словах</h1>
+<p>Проверьте свои знания прямо сейчас!</p>
+<div class="words_name_class">
+    <form method="GET">
+        {% csrf_token %}
+            <div>
+                {% for ind, i in words.word %}
+                    <button class="butt" type="submit" name="index" value={{ind}}>{{ i }}</button>
+                {% endfor %}
+            </div>
+    </form>
+    {% if flag == 1 %}
+        <div class="nice_message">
+            Правильно!
+        </div>
+    {% elif flag == 0 %}
+        <div class="warning_message">
+            Неправильно!
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
